@@ -1,0 +1,39 @@
+
+#ifndef _NWK_MM_H
+#define _NWK_MM_H
+
+
+#define DECT_MM_AUTHENTICATION_REQUEST	0x40
+#define DECT_MM_AUTHENTICATION_REPLY	0x41
+#define DECT_MM_KEY_ALLOCATE			0x42
+#define DECT_MM_AUTHENTICATION_REJECT	0x43
+#define DECT_MM_ACCESS_RIGHTS_REQUEST	0x44
+#define DECT_MM_ACCESS_RIGHTS_ACCEPT	0x45
+#define DECT_MM_ACCESS_RIGHTS_REJECT	0x47
+#define DECT_MM_ACCESS_TERM_REQUEST		0x48
+#define DECT_MM_ACCESS_TERM_ACCEPT		0x49
+#define DECT_MM_ACCESS_TERM_REJECT		0x4B
+#define DECT_MM_CIPHER_REQUEST			0x4C
+#define DECT_MM_CIPHER_SUGGEST			0x4E
+#define DECT_MM_CIPHER_REJECT			0x4F
+#define DECT_MM_INFO_REQUEST			0x50
+#define DECT_MM_INFO_ACCEPT				0x51
+#define DECT_MM_INFO_SUGGEST			0x52
+#define DECT_MM_INFO_REJECT				0x53
+#define DECT_MM_LOCATE_REQUEST			0x54
+#define DECT_MM_LOCATE_ACCEPT			0x55
+#define DECT_MM_DETACH					0x56
+#define DECT_MM_LOCATE_REJECT			0x57
+#define DECT_MM_IDENTITY_REQUEST		0x58
+#define DECT_MM_IDENTITY_REPLY			0x59
+#define DECT_MM_IWU						0x5B
+#define DECT_MM_TMP_IDENTITY_ASSIGN		0x5C
+#define DECT_MM_TMP_IDENTITY_ASSIGN_ACK	0x5D
+#define DECT_MM_TMP_IDENTITY_ASSIGN_REJ	0x5F
+#define DECT_MM_NOTIFY					0x5E
+
+
+char * mm_dump_cmd(unsigned char cmd);
+void mm_command(struct nwk_transaction *trans, unsigned char cmd, unsigned char *data, int len);
+
+#endif

@@ -1,0 +1,115 @@
+VERSION 6
+BEGIN SCHEMATIC
+    BEGIN ATTR DeviceFamilyName "spartan3"
+        DELETE all:0
+        EDITNAME all:0
+        EDITTRAIT all:0
+    END ATTR
+    BEGIN NETLIST
+        SIGNAL GBUS(7:0)
+        SIGNAL GBUS(6)
+        SIGNAL GBUS(5)
+        SIGNAL GBUS(4)
+        SIGNAL GBUS(3)
+        SIGNAL GBUS(2)
+        SIGNAL GBUS(1)
+        SIGNAL GBUS(0)
+        SIGNAL GBUS(7)
+        PORT Output GBUS(7:0)
+        BEGIN BLOCKDEF gnd
+            TIMESTAMP 2001 2 2 12 37 29
+            LINE N 64 -64 64 -96 
+            LINE N 76 -48 52 -48 
+            LINE N 68 -32 60 -32 
+            LINE N 88 -64 40 -64 
+            LINE N 64 -64 64 -80 
+            LINE N 64 -128 64 -96 
+        END BLOCKDEF
+        BEGIN BLOCK XLXI_2 gnd
+            PIN G GBUS(7)
+        END BLOCK
+        BEGIN BLOCK XLXI_3 gnd
+            PIN G GBUS(6)
+        END BLOCK
+        BEGIN BLOCK XLXI_4 gnd
+            PIN G GBUS(5)
+        END BLOCK
+        BEGIN BLOCK XLXI_5 gnd
+            PIN G GBUS(4)
+        END BLOCK
+        BEGIN BLOCK XLXI_6 gnd
+            PIN G GBUS(3)
+        END BLOCK
+        BEGIN BLOCK XLXI_7 gnd
+            PIN G GBUS(2)
+        END BLOCK
+        BEGIN BLOCK XLXI_8 gnd
+            PIN G GBUS(1)
+        END BLOCK
+        BEGIN BLOCK XLXI_9 gnd
+            PIN G GBUS(0)
+        END BLOCK
+    END NETLIST
+    BEGIN SHEET 1 3520 2720
+        IOMARKER 960 800 GBUS(7:0) R180 28
+        BUSTAP 1120 816 1216 816
+        BUSTAP 1120 880 1216 880
+        BUSTAP 1120 944 1216 944
+        BUSTAP 1120 1008 1216 1008
+        BUSTAP 1120 1072 1216 1072
+        BUSTAP 1120 1136 1216 1136
+        BUSTAP 1120 1200 1216 1200
+        BEGIN BRANCH GBUS(6)
+            WIRE 1216 1200 1376 1200
+            WIRE 1376 1200 1376 1280
+        END BRANCH
+        BEGIN BRANCH GBUS(5)
+            WIRE 1216 1136 1440 1136
+            WIRE 1440 1136 1440 1280
+        END BRANCH
+        BEGIN BRANCH GBUS(4)
+            WIRE 1216 1072 1504 1072
+            WIRE 1504 1072 1504 1280
+        END BRANCH
+        BEGIN BRANCH GBUS(3)
+            WIRE 1216 1008 1568 1008
+            WIRE 1568 1008 1568 1280
+        END BRANCH
+        BEGIN BRANCH GBUS(2)
+            WIRE 1216 944 1632 944
+            WIRE 1632 944 1632 1280
+        END BRANCH
+        BEGIN BRANCH GBUS(1)
+            WIRE 1216 880 1696 880
+            WIRE 1696 880 1696 1280
+        END BRANCH
+        BEGIN BRANCH GBUS(0)
+            WIRE 1216 816 1760 816
+            WIRE 1760 816 1760 1280
+        END BRANCH
+        BUSTAP 1120 1264 1216 1264
+        BEGIN BRANCH GBUS(7:0)
+            WIRE 960 800 1120 800
+            WIRE 1120 800 1120 816
+            WIRE 1120 816 1120 880
+            WIRE 1120 880 1120 944
+            WIRE 1120 944 1120 1008
+            WIRE 1120 1008 1120 1072
+            WIRE 1120 1072 1120 1136
+            WIRE 1120 1136 1120 1200
+            WIRE 1120 1200 1120 1264
+        END BRANCH
+        BEGIN BRANCH GBUS(7)
+            WIRE 1216 1264 1312 1264
+            WIRE 1312 1264 1312 1280
+        END BRANCH
+        INSTANCE XLXI_2 1248 1408 R0
+        INSTANCE XLXI_3 1312 1408 R0
+        INSTANCE XLXI_4 1376 1408 R0
+        INSTANCE XLXI_5 1440 1408 R0
+        INSTANCE XLXI_6 1504 1408 R0
+        INSTANCE XLXI_7 1568 1408 R0
+        INSTANCE XLXI_8 1632 1408 R0
+        INSTANCE XLXI_9 1696 1408 R0
+    END SHEET
+END SCHEMATIC

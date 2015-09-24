@@ -1,0 +1,346 @@
+VERSION 6
+BEGIN SCHEMATIC
+    BEGIN ATTR DeviceFamilyName "spartan3"
+        DELETE all:0
+        EDITNAME all:0
+        EDITTRAIT all:0
+    END ATTR
+    BEGIN NETLIST
+        SIGNAL BIN(7:0)
+        SIGNAL E
+        SIGNAL BIN(0)
+        SIGNAL BIN(1)
+        SIGNAL BIN(2)
+        SIGNAL BIN(3)
+        SIGNAL BIN(4)
+        SIGNAL BIN(5)
+        SIGNAL BIN(6)
+        SIGNAL BIN(7)
+        SIGNAL XLXN_10
+        SIGNAL XLXN_11
+        SIGNAL XLXN_12
+        SIGNAL XLXN_13
+        SIGNAL XLXN_14
+        SIGNAL XLXN_15
+        SIGNAL XLXN_16
+        SIGNAL XLXN_17
+        SIGNAL BOUT(7:0)
+        SIGNAL BOUT(0)
+        SIGNAL BOUT(1)
+        SIGNAL BOUT(2)
+        SIGNAL BOUT(3)
+        SIGNAL BOUT(4)
+        SIGNAL BOUT(5)
+        SIGNAL BOUT(6)
+        SIGNAL BOUT(7)
+        SIGNAL BPREV(7:0)
+        SIGNAL BPREV(0)
+        SIGNAL BPREV(1)
+        SIGNAL BPREV(2)
+        SIGNAL BPREV(3)
+        SIGNAL BPREV(4)
+        SIGNAL BPREV(5)
+        SIGNAL BPREV(6)
+        SIGNAL BPREV(7)
+        PORT Input BIN(7:0)
+        PORT Input E
+        PORT Output BOUT(7:0)
+        PORT Input BPREV(7:0)
+        BEGIN BLOCKDEF and2
+            TIMESTAMP 2001 2 2 12 38 38
+            LINE N 0 -64 64 -64 
+            LINE N 0 -128 64 -128 
+            LINE N 256 -96 192 -96 
+            ARC N 96 -144 192 -48 144 -48 144 -144 
+            LINE N 144 -48 64 -48 
+            LINE N 64 -144 144 -144 
+            LINE N 64 -48 64 -144 
+        END BLOCKDEF
+        BEGIN BLOCKDEF or2
+            TIMESTAMP 2001 2 2 12 38 38
+            LINE N 0 -64 64 -64 
+            LINE N 0 -128 64 -128 
+            LINE N 256 -96 192 -96 
+            ARC N 28 -224 204 -48 112 -48 192 -96 
+            ARC N -40 -152 72 -40 48 -48 48 -144 
+            LINE N 112 -144 48 -144 
+            ARC N 28 -144 204 32 192 -96 112 -144 
+            LINE N 112 -48 48 -48 
+        END BLOCKDEF
+        BEGIN BLOCK XLXI_1 and2
+            PIN I0 E
+            PIN I1 BIN(0)
+            PIN O XLXN_10
+        END BLOCK
+        BEGIN BLOCK XLXI_2 and2
+            PIN I0 E
+            PIN I1 BIN(1)
+            PIN O XLXN_11
+        END BLOCK
+        BEGIN BLOCK XLXI_3 and2
+            PIN I0 E
+            PIN I1 BIN(2)
+            PIN O XLXN_12
+        END BLOCK
+        BEGIN BLOCK XLXI_4 and2
+            PIN I0 E
+            PIN I1 BIN(3)
+            PIN O XLXN_13
+        END BLOCK
+        BEGIN BLOCK XLXI_5 and2
+            PIN I0 E
+            PIN I1 BIN(4)
+            PIN O XLXN_14
+        END BLOCK
+        BEGIN BLOCK XLXI_6 and2
+            PIN I0 E
+            PIN I1 BIN(5)
+            PIN O XLXN_15
+        END BLOCK
+        BEGIN BLOCK XLXI_7 and2
+            PIN I0 E
+            PIN I1 BIN(6)
+            PIN O XLXN_16
+        END BLOCK
+        BEGIN BLOCK XLXI_8 and2
+            PIN I0 E
+            PIN I1 BIN(7)
+            PIN O XLXN_17
+        END BLOCK
+        BEGIN BLOCK XLXI_9 or2
+            PIN I0 BPREV(0)
+            PIN I1 XLXN_10
+            PIN O BOUT(0)
+        END BLOCK
+        BEGIN BLOCK XLXI_10 or2
+            PIN I0 BPREV(1)
+            PIN I1 XLXN_11
+            PIN O BOUT(1)
+        END BLOCK
+        BEGIN BLOCK XLXI_11 or2
+            PIN I0 BPREV(2)
+            PIN I1 XLXN_12
+            PIN O BOUT(2)
+        END BLOCK
+        BEGIN BLOCK XLXI_12 or2
+            PIN I0 BPREV(3)
+            PIN I1 XLXN_13
+            PIN O BOUT(3)
+        END BLOCK
+        BEGIN BLOCK XLXI_13 or2
+            PIN I0 BPREV(4)
+            PIN I1 XLXN_14
+            PIN O BOUT(4)
+        END BLOCK
+        BEGIN BLOCK XLXI_14 or2
+            PIN I0 BPREV(5)
+            PIN I1 XLXN_15
+            PIN O BOUT(5)
+        END BLOCK
+        BEGIN BLOCK XLXI_15 or2
+            PIN I0 BPREV(6)
+            PIN I1 XLXN_16
+            PIN O BOUT(6)
+        END BLOCK
+        BEGIN BLOCK XLXI_16 or2
+            PIN I0 BPREV(7)
+            PIN I1 XLXN_17
+            PIN O BOUT(7)
+        END BLOCK
+    END NETLIST
+    BEGIN SHEET 1 3520 2720
+        BEGIN BRANCH BIN(7:0)
+            WIRE 640 640 800 640
+            WIRE 800 640 800 800
+            WIRE 800 800 800 960
+            WIRE 800 960 800 1120
+            WIRE 800 1120 800 1280
+            WIRE 800 1280 800 1440
+            WIRE 800 320 800 480
+            WIRE 800 480 800 640
+        END BRANCH
+        IOMARKER 640 640 BIN(7:0) R180 28
+        INSTANCE XLXI_1 960 448 R0
+        INSTANCE XLXI_2 960 608 R0
+        INSTANCE XLXI_3 960 768 R0
+        INSTANCE XLXI_4 960 928 R0
+        INSTANCE XLXI_5 960 1088 R0
+        INSTANCE XLXI_6 960 1248 R0
+        INSTANCE XLXI_7 960 1408 R0
+        INSTANCE XLXI_8 960 1568 R0
+        BEGIN BRANCH E
+            WIRE 560 800 720 800
+            WIRE 720 800 720 864
+            WIRE 720 864 960 864
+            WIRE 720 864 720 1024
+            WIRE 720 1024 960 1024
+            WIRE 720 1024 720 1184
+            WIRE 720 1184 960 1184
+            WIRE 720 1184 720 1344
+            WIRE 720 1344 720 1504
+            WIRE 720 1504 960 1504
+            WIRE 720 1344 960 1344
+            WIRE 720 384 960 384
+            WIRE 720 384 720 544
+            WIRE 720 544 960 544
+            WIRE 720 544 720 704
+            WIRE 720 704 720 800
+            WIRE 720 704 960 704
+        END BRANCH
+        IOMARKER 560 800 E R180 28
+        BUSTAP 800 320 896 320
+        BUSTAP 800 480 896 480
+        BUSTAP 800 640 896 640
+        BUSTAP 800 800 896 800
+        BUSTAP 800 960 896 960
+        BUSTAP 800 1120 896 1120
+        BUSTAP 800 1280 896 1280
+        BUSTAP 800 1440 896 1440
+        BEGIN BRANCH BIN(0)
+            WIRE 896 320 960 320
+        END BRANCH
+        BEGIN BRANCH BIN(1)
+            WIRE 896 480 960 480
+        END BRANCH
+        BEGIN BRANCH BIN(2)
+            WIRE 896 640 960 640
+        END BRANCH
+        BEGIN BRANCH BIN(3)
+            WIRE 896 800 960 800
+        END BRANCH
+        BEGIN BRANCH BIN(4)
+            WIRE 896 960 960 960
+        END BRANCH
+        BEGIN BRANCH BIN(5)
+            WIRE 896 1120 960 1120
+        END BRANCH
+        BEGIN BRANCH BIN(6)
+            WIRE 896 1280 960 1280
+        END BRANCH
+        BEGIN BRANCH BIN(7)
+            WIRE 896 1440 960 1440
+        END BRANCH
+        INSTANCE XLXI_9 1440 480 R0
+        INSTANCE XLXI_10 1440 640 R0
+        INSTANCE XLXI_11 1440 800 R0
+        INSTANCE XLXI_12 1440 960 R0
+        INSTANCE XLXI_13 1440 1120 R0
+        INSTANCE XLXI_14 1440 1280 R0
+        INSTANCE XLXI_15 1440 1440 R0
+        INSTANCE XLXI_16 1440 1600 R0
+        BEGIN BRANCH XLXN_10
+            WIRE 1216 352 1440 352
+        END BRANCH
+        BEGIN BRANCH XLXN_11
+            WIRE 1216 512 1440 512
+        END BRANCH
+        BEGIN BRANCH XLXN_12
+            WIRE 1216 672 1440 672
+        END BRANCH
+        BEGIN BRANCH XLXN_13
+            WIRE 1216 832 1440 832
+        END BRANCH
+        BEGIN BRANCH XLXN_14
+            WIRE 1216 992 1440 992
+        END BRANCH
+        BEGIN BRANCH XLXN_15
+            WIRE 1216 1152 1440 1152
+        END BRANCH
+        BEGIN BRANCH XLXN_16
+            WIRE 1216 1312 1440 1312
+        END BRANCH
+        BEGIN BRANCH XLXN_17
+            WIRE 1216 1472 1440 1472
+        END BRANCH
+        BUSTAP 1920 384 1824 384
+        BUSTAP 1920 544 1824 544
+        BEGIN BRANCH BOUT(7:0)
+            WIRE 1920 384 1920 544
+            WIRE 1920 544 1920 672
+            WIRE 1920 672 2080 672
+            WIRE 1920 672 1920 704
+            WIRE 1920 704 1920 864
+            WIRE 1920 864 1920 1024
+            WIRE 1920 1024 1920 1184
+            WIRE 1920 1184 1920 1344
+            WIRE 1920 1344 1920 1504
+        END BRANCH
+        BUSTAP 1920 704 1824 704
+        BUSTAP 1920 864 1824 864
+        BUSTAP 1920 1024 1824 1024
+        BUSTAP 1920 1184 1824 1184
+        BUSTAP 1920 1344 1824 1344
+        BUSTAP 1920 1504 1824 1504
+        IOMARKER 2080 672 BOUT(7:0) R0 28
+        BEGIN BRANCH BOUT(0)
+            WIRE 1696 384 1824 384
+        END BRANCH
+        BEGIN BRANCH BOUT(1)
+            WIRE 1696 544 1824 544
+        END BRANCH
+        BEGIN BRANCH BOUT(2)
+            WIRE 1696 704 1824 704
+        END BRANCH
+        BEGIN BRANCH BOUT(3)
+            WIRE 1696 864 1824 864
+        END BRANCH
+        BEGIN BRANCH BOUT(4)
+            WIRE 1696 1024 1824 1024
+        END BRANCH
+        BEGIN BRANCH BOUT(5)
+            WIRE 1696 1184 1824 1184
+        END BRANCH
+        BEGIN BRANCH BOUT(6)
+            WIRE 1696 1344 1824 1344
+        END BRANCH
+        BEGIN BRANCH BOUT(7)
+            WIRE 1696 1504 1824 1504
+        END BRANCH
+        BEGIN BRANCH BPREV(7:0)
+            WIRE 960 160 1120 160
+            WIRE 1120 160 1264 160
+            WIRE 1264 160 1280 160
+            WIRE 1280 160 1280 416
+            WIRE 1280 416 1280 576
+            WIRE 1280 576 1280 736
+            WIRE 1280 736 1280 896
+            WIRE 1280 896 1280 1056
+            WIRE 1280 1056 1280 1216
+            WIRE 1280 1216 1280 1376
+            WIRE 1280 1376 1280 1536
+        END BRANCH
+        IOMARKER 960 160 BPREV(7:0) R180 28
+        BUSTAP 1280 416 1376 416
+        BUSTAP 1280 576 1376 576
+        BUSTAP 1280 736 1376 736
+        BUSTAP 1280 896 1376 896
+        BUSTAP 1280 1056 1376 1056
+        BUSTAP 1280 1216 1376 1216
+        BUSTAP 1280 1376 1376 1376
+        BUSTAP 1280 1536 1376 1536
+        BEGIN BRANCH BPREV(0)
+            WIRE 1376 416 1440 416
+        END BRANCH
+        BEGIN BRANCH BPREV(1)
+            WIRE 1376 576 1440 576
+        END BRANCH
+        BEGIN BRANCH BPREV(2)
+            WIRE 1376 736 1440 736
+        END BRANCH
+        BEGIN BRANCH BPREV(3)
+            WIRE 1376 896 1440 896
+        END BRANCH
+        BEGIN BRANCH BPREV(4)
+            WIRE 1376 1056 1440 1056
+        END BRANCH
+        BEGIN BRANCH BPREV(5)
+            WIRE 1376 1216 1440 1216
+        END BRANCH
+        BEGIN BRANCH BPREV(6)
+            WIRE 1376 1376 1440 1376
+        END BRANCH
+        BEGIN BRANCH BPREV(7)
+            WIRE 1376 1536 1440 1536
+        END BRANCH
+    END SHEET
+END SCHEMATIC

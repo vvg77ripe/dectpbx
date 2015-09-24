@@ -1,0 +1,16 @@
+# DECT server daemon configuration file
+#
+
+# SQL server configuration
+sql.type = mysql
+sql.host = <your-mysql-host>
+sql.user = <your-mysql-user>
+sql.pass = <your-mysql-password>
+sql.database = dect
+
+# SIP configuration
+sip.localip = <your-ip-address>
+sip.proxy = <yout-sip-server-ip>
+
+# DECT configuration
+dect.park = 32:15242001
